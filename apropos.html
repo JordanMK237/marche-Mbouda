@@ -1,0 +1,100 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ô Marché Mbouda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <nav class="nav-container">
+        <img src="images/logo.png" alt="Logo de mon site" class="logo">
+        <ul class="nav-menu">
+            <li><a href="accueil.html" class="nav-link">Accueil</a></li>
+            <li><a href="apropos.html" class="nav-link">À Propos</a></li>
+            <li><a href="#stores" class="nav-link">Boutique</a></li>
+            <li><a href="#products" class="nav-link">Nos Produits</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Super marché et épicerie Exotique</h1>
+        <p class="hero-subtitle">vous servir de la qualité est notre identité</p>
+        <a href="#products" class="btn btn-primary">Consulter nos produits</a>
+    </div>
+</section>
+
+<section id="features" class="section">
+    <div class="container">
+        <h2 class="section-title">Pourquoi nous choisir ? </h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3>Organic Products</h3>
+                <p>Fresh and certified organic produce</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Same day delivery available</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Best Prices</h3>
+                <p>Competitive prices on all items</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="stores" class="section">
+    <div class="container">
+        <h2 class="section-title">Notre Magasin</h2>
+        <div id="map" class="store-locator"></div>
+    </div>
+</section>
+
+<section id="products" class="section">
+    <div class="container">
+        <h2 class="section-title">Nos Produits</h2>
+        <input type="text" id="search" placeholder="Search products..." class="search-input">
+        <div id="product-grid" class="product-grid">
+            <!-- Products will be rendered here -->
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3 class="footer-title">À propos de nous</h3>
+                <p>Vous servir de la qualité est notre idebtité.</p>
+            </div>
+            <div>
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="accueil.html" class="footer-link">Accueil</a></li>
+                    <li><a href="apropos.html" class="footer-link">À propos</a></li>
+                    <li><a href="#products" class="footer-link">Products</a></li>
+                    <li><a href="#contact" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-title">Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script src="app.js"></script>
+</body>
+</html>

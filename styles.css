@@ -10,14 +10,14 @@
 
 /* Global */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Averia Serif Libre', serif;
     background: var(--background);
     color: var(--text-dark);
     margin: 0;
 }
 
 h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Averia Serif Libre', serif;
 }
 
 @keyframes fadeIn {
@@ -206,6 +206,7 @@ h1, h2, h3 {
 
 /* Style du nom à côté du logo */
 .store-name {
+    font-family: 'Averia Serif Libre', serif;
     font-size: 1.5rem;
     font-weight: bold;
     margin-left: 10px;
@@ -346,6 +347,14 @@ h1, h2, h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
+.category-header h2 {
+    color: #9c7d5a;
+}
+
+.brands-section h2 {
+    color: #9c7d5a;
+}
+
 
 .livraison p {
     font-size: 14px;
@@ -749,6 +758,16 @@ footer {
     font-size: 24px;
     z-index: 10;
 }
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Ajuste selon le nombre de slides */
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
 
 .prev {
     left: 10px;
@@ -986,14 +1005,23 @@ footer {
 }
 
 .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide img {
     width: 100%;
-    border-radius: 10px;
+    height: auto; /* Garde le ratio d'origine */
+    object-fit: cover; /* Recadre l'image pour remplir sans déformer */
+    max-height: 500px; /* Ajuste la hauteur max */
 }
+
 
 /* ✅ Correction position boutons */
 .carousel-prev, .carousel-next {
